@@ -1,4 +1,4 @@
-# House Price Prediction — Greater Bandung
+# House Price Prediction — Bandung Raya
 
 A regression model to predict house prices in Greater Bandung (Bandung City, Bandung Regency, and West Bandung Regency) based on property characteristics such as land area, building area, number of rooms, and location.
 
