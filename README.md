@@ -2,8 +2,6 @@
 
 A regression model to predict house prices in Bandung Raya (Bandung City, Bandung Regency, and West Bandung Regency) based on property characteristics such as land area, building area, number of rooms, and location.
 
-**Live demo:** [your-app-name.streamlit.app](#) <!-- replace with your actual Streamlit Cloud URL after deployment -->
-
 ## Summary
 
 | | |
