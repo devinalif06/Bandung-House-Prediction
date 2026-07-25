@@ -2,6 +2,8 @@
 
 A regression model to predict house prices in Bandung Raya (Bandung City, Bandung Regency, and West Bandung Regency) based on property characteristics such as land area, building area, number of rooms, and location.
 
+**Live demo:** [your-app-name.streamlit.app](#) <!-- replace with your actual Streamlit Cloud URL after deployment -->
+
 ## Summary
 
 | | |
@@ -32,7 +34,7 @@ The dataset contains house listings in Greater Bandung with the following featur
 
 ## Methodology
 
-The workflow follows a standard data science pipeline, from raw data to a deployable model:
+The workflow follows a standard data science pipeline, from raw data to a deployed, interactive model:
 
 1. **Initial Inspection** — check data structure, missing values, duplicates, cardinality of categorical columns
 2. **Exploratory Data Analysis** — target distribution (right-skewed → `log1p`), numerical feature distributions, outlier detection (IQR), correlation with target, ANOVA test for categorical features, multicollinearity check (VIF)
@@ -42,6 +44,7 @@ The workflow follows a standard data science pipeline, from raw data to a deploy
 6. **Hyperparameter Tuning** — `RandomizedSearchCV` (30 combinations, 5-fold) on the best-performing model
 7. **Evaluation & Error Analysis** — residual plots, learning curve, final evaluation on a held-out test set never seen during model selection or tuning
 8. **Feature Importance** — analysis of each feature's contribution to the predictions
+9. **Deployment** — final pipeline (preprocessing + tuned model) served through an interactive Streamlit web app
 
 ## Model Comparison Results
 
@@ -67,6 +70,7 @@ Top 5 models by performance (5-fold CV, original Rupiah scale):
 ## Project Structure
 
 ```
+├── app.py
 ├── data/
 │   └── clean_df.csv
 ├── models/
@@ -83,7 +87,16 @@ Top 5 models by performance (5-fold CV, original Rupiah scale):
 git clone <repo-url>
 cd house-price-prediction
 pip install -r requirements.txt
+```
+
+**Run the notebook** (EDA, modeling, evaluation):
+```bash
 jupyter notebook notebooks/house_price_prediction.ipynb
+```
+
+**Run the web app** locally:
+```bash
+streamlit run app.py
 ```
 
 ## Using the Saved Model
@@ -118,8 +131,9 @@ print(f"Estimated price: IDR {predicted_price[0]:,.0f}")
 
 ## Tech Stack
 
-`Python` · `pandas` · `NumPy` · `scikit-learn` · `XGBoost` · `LightGBM` · `CatBoost` · `statsmodels` · `matplotlib` · `seaborn`
+`Python` · `pandas` · `NumPy` · `scikit-learn` · `XGBoost` · `LightGBM` · `CatBoost` · `statsmodels` · `matplotlib` · `seaborn` · `Streamlit`
 
 ## Contact
 
-Built by Devin Alif — Information Systems student, Institut Teknologi Sepuluh Nopember (ITS)
+Built by [Your Name] — Information Systems student, Institut Teknologi Sepuluh Nopember (ITS)
+[LinkedIn] · [Email] · [GitHub]
