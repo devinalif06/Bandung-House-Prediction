@@ -133,5 +133,4 @@ print(f"Estimated price: IDR {predicted_price[0]:,.0f}")
 
 ## Contact
 
-Built by [Your Name] — Information Systems student, Institut Teknologi Sepuluh Nopember (ITS)
-[LinkedIn] · [Email] · [GitHub]
+Built by Devin Alif — Information Systems student, Institut Teknologi Sepuluh Nopember (ITS)
